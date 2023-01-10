@@ -18,16 +18,19 @@ if (size == 0)
 return (NULL);
 }
 
-p = malloc(size * sizeof(char));
+p = (char *) malloc(size * sizeof(char));
 
-if (p == 0)
+if (p == NULL)
 {
-return (NULL);
+return (0);
 }
 
-for (i = 0; i < size; i++)
+while (i < size)
 {
-p[i] = c;
+*(p + i) = c;
+i++;
 }
+*(p + i) = '\0';
+
 return (p)
 }
