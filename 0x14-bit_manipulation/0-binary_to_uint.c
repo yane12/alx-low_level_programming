@@ -13,7 +13,6 @@ int len;
 
 if (b == NULL)
 return (0);
-
 for (len = 0; b[len]; len++)
 {
 if (b[len] != '0' && b[len] != '1')
