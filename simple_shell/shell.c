@@ -23,7 +23,7 @@ int main(int argc __attribute__((unused)),
 		/* return 1 if the file in the argument refers to the terminal */
 		status_return = isatty(STDIN_FILENO);
 		if (status_return) /* if we are in interactive mode */
-			write(STDOUT_FILENO, "$ ", 2); /* print prompt */
+			write(STDOUT_FILENO, "($) ", 2); /* print prompt */
 		glrv = getline(&input_stdin, &size, stdin);/* get input from stdin */
 		if (glrv == -1) /* if we get EOF or any error */
 		{
